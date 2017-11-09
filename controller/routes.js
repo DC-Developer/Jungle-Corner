@@ -19,8 +19,8 @@ router.get("/", function(req, res) {
     //need to use an ajax call on the submit button and send the data to this route
     var newSummoner = {};
 
-    newSummoner.name = req.body.summoner;
-    console.log(newSummoner.name);
+    newSummoner.name = req.body;
+    console.log(req.body);
     var entry = new Summoner(newSummoner);
 
     entry.save(function(err, summoner){

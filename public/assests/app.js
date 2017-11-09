@@ -2,15 +2,16 @@
 $(document).on("submit", "#search-button", function(e){
   e.preventDefault();
   var name = $("#input-field").val().trim();
-  newSummoner = {
+  var newSummoner = {
     summoner: name
   }
   $.ajax({
     url: "/search",
     method: "post",
     body: newSummoner
-  }).done(function(){
-    // location.reload();  
+  }).done(function(data){
+    location.reload();
+    console.log(data);  
   })
 })
 

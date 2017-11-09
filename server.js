@@ -10,7 +10,7 @@ mongoose.Promise = Promise;
 
 var app = express();
 
-var MONGOLAB_URI = "mongodb://root:root@ds229465.mlab.com:29465/heroku_n12hgckr";
+var MONGOLAB_URI = "mongodb://root:root@ds151955.mlab.com:51955/heroku_1lf908jc";
 
 var PORT = process.env.PORT || 3000;
 
