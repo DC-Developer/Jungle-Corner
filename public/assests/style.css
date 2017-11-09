@@ -29,3 +29,16 @@ textarea, input {
     height: 200px;
     font-size: 18px;
   }
+
+#search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input-field{
+    height: 45px;
+    width: 50%
+}
+#search-button{
+    height: 90%
+}
