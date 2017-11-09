@@ -1,0 +1,31 @@
+*{  
+    margin: auto 0;
+    box-sizing: border-box;
+
+}
+#titleDiv{
+    background-color: rgb(42, 139, 123);
+    padding: 5px 5px;
+    margin-bottom: 15px;
+}
+#titleDiv a{
+    font-size: 20px;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+
+textarea, input {
+    display: block;
+    width: 100%;
+    background-color: #efefefda;
+  }
+  input {
+    height: 36px;
+    font-size: 24px;
+  }
+  textarea {
+    height: 200px;
+    font-size: 18px;
+  }
