@@ -15,12 +15,13 @@ router.get("/", function(req, res) {
     // })
     res.render("index");
   });
-  router.get("/search", function(req, res){
+  router.post("/search", function(req, res){
     //need to use an ajax call on the submit button and send the data to this route
-    var newSummoner = {};
+    var newSummoner = {
+      name: req.body.summoner
+    };
 
-    newSummoner.name = req.body;
-    console.log(req.body);
+    console.log(req.body.summoner);
     var entry = new Summoner(newSummoner);
 
     entry.save(function(err, summoner){
