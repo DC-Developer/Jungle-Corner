@@ -11,7 +11,7 @@ $(document).on("click", "#search-button", function(e){
     method: "POST",
     body: newSummoner
   }).done(function(data){
-    location.reload();
+    // location.reload();
     console.log(data);  
   })
 })

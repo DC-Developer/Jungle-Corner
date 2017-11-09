@@ -17,25 +17,32 @@ router.get("/", function(req, res) {
   });
   router.post("/search", function(req, res){
     //need to use an ajax call on the submit button and send the data to this route
-    var newSummoner = {
-      name: req.body.summoner
-    };
+    var newSummoner = req.body.summoner;
+
 
     console.log(req.body.summoner);
-    var entry = new Summoner(newSummoner);
+    // var entry = new Summoner(newSummoner);
 
-    entry.save(function(err, summoner){
-      if(err){
-        console.log(err);
-      }else{
-        hbsObject = {
-          name: summoner
-        }
-        console.log("You saved");
-        res.render("index", hbsObject );
+    // entry.save(function(err, summoner){
+    //   if(err){
+    //     console.log(err);
+    //   }else{
+    //     hbsObject = {
+    //       name: summoner
+    //     }
+    //     console.log("You saved");
+    //     res.render("index", hbsObject );
         
-      }
-    })
+    //   }
+    // })
+    Summoner
+      .create(newSummoner)
+      .then(function(newSummoner){
+        res.send("Created Summoner");
+      })
+      .catch(function(err){
+        res.json(err);
+      })
 
  
     
@@ -45,7 +52,11 @@ router.get("/", function(req, res) {
    
     // TODO: Finish the route so it grabs all of the articles
     Summoner.find({}, function(err, data){
-      
+      if(err){
+        console.log(err);
+      }else{
+        res.json(data);
+      }
   
     })
   
