@@ -7,7 +7,7 @@ $(document).on("submit", "#search-button", function(e){
   }
   $.ajax({
     url: "/search",
-    method: "post",
+    method: "get",
     body: newSummoner
   }).done(function(data){
     location.reload();

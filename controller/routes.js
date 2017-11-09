@@ -15,7 +15,7 @@ router.get("/", function(req, res) {
     // })
     res.render("index");
   });
-  router.post("/search", function(req, res){
+  router.get("/search", function(req, res){
     //need to use an ajax call on the submit button and send the data to this route
     var newSummoner = {};
 
