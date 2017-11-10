@@ -9,6 +9,30 @@ var SummonerSchema = new Schema({
     type: String,
     required: true
   },
+  rank: {
+    type: String,
+    required: false
+  },
+  wins: {
+    type: Number,
+    required: false
+  },
+  losses: {
+    type: Number,
+    required: false
+  },
+  wardSpot: {
+    type: String,
+    required: false
+  },
+  gankDeathsPerGame: {
+    type: Number,
+    required: false
+  },
+  winrateIfCamped: {
+    type: Number,
+    required: false
+  }
 
   // saved: {type: Boolean, default: false},
 
