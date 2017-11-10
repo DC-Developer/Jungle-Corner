@@ -32,6 +32,10 @@ var SummonerSchema = new Schema({
   winrateIfCamped: {
     type: Number,
     required: false
+  },
+  currentGameId: {
+    type: Number,
+    required: true
   }
 
   // saved: {type: Boolean, default: false},

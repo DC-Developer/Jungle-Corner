@@ -2,14 +2,10 @@
 $(document).on("click", "#search-button", function(e){
   e.preventDefault();
   var name = $("#input-field").val().trim();
-  var newSummoner = {
-    summoner: name
-  }
-  console.log(newSummoner);
+
   $.ajax({
-    url: "/search",
-    method: "POST",
-    body: newSummoner
+    url: "/search/" +name,
+    method: "POST"
   }).done(function(data){
     // location.reload();
     console.log(data);  

@@ -15,37 +15,26 @@ router.get("/", function(req, res) {
     // })
     res.render("index");
   });
-  router.post("/search", function(req, res){
+  router.post("/search/:name", function(req, res){
     //need to use an ajax call on the submit button and send the data to this route
-    var newSummoner = req.body.summoner;
-
-
-    console.log(req.body.summoner);
-    // var entry = new Summoner(newSummoner);
-
-    // entry.save(function(err, summoner){
-    //   if(err){
-    //     console.log(err);
-    //   }else{
-    //     hbsObject = {
-    //       name: summoner
-    //     }
-    //     console.log("You saved");
-    //     res.render("index", hbsObject );
-        
-    //   }
-    // })
-    Summoner
-      .create(newSummoner)
-      .then(function(newSummoner){
-        res.send("Created Summoner");
-      })
-      .catch(function(err){
-        res.json(err);
-      })
-
- 
+    var newSummoner = req.params.name;
+    console.log(newSummoner);
     
+    var hbsObject = {};
+
+    Summoner.find({name: newSummoner}, function(err,data){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("You're working");
+        console.log(data);
+         hbsObject = {
+          summoners: data
+        }
+        console.log("hbs: ",hbsObject);
+        res.render("summoners", hbsObject);
+      }
+    })
   });
   // This will get all the summoners we saved in our db
   router.get("/summoners", function(req, res) {

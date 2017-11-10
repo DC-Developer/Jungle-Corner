@@ -10,7 +10,8 @@ module.exports = {
           losses: 300,
           wardSpot: 'Top river bush',
           gankDeathsPerGame: 1,
-          winrateIfCamped: 51.5
+          winrateIfCamped: 51.5,
+          currentGameId: 1152
         },
         { name: 'Malphite',
           rank: 'Challenger',
@@ -18,7 +19,8 @@ module.exports = {
           losses: 169,
           wardSpot: 'Red bush',
           gankDeathsPerGame: 0.5,
-          winrateIfCamped: 54
+          winrateIfCamped: 54,
+          currentGameId: 1152
         },
         { name: 'Yasuo',
           rank: 'Master',
@@ -26,7 +28,8 @@ module.exports = {
           losses: 465,
           wardSpot: 'Mid-right river bush',
           gankDeathsPerGame: 2.3,
-          winrateIfCamped: 47
+          winrateIfCamped: 47,
+          currentGameId: 1152
         
         },
         { name: 'Lulu',
@@ -35,7 +38,8 @@ module.exports = {
           losses: 189,
           wardSpot: 'Bot tri-bush',
           gankDeathsPerGame: 2,
-          winrateIfCamped: 51
+          winrateIfCamped: 51,
+          currentGameId: 1152
         
         },
         { name: 'Draven',
@@ -44,7 +48,8 @@ module.exports = {
           losses:  177,
           wardSpot: 'Bot lane-bush',
           gankDeathsPerGame: 4,
-          winrateIfCamped: 50
+          winrateIfCamped: 50,
+          currentGameId: 1152
         },
 
     ]
