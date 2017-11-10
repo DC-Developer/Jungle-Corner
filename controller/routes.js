@@ -4,7 +4,8 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 
 var Summoner = require("../models/Summoner.js");
-
+//was not able to get the search button to load the api info and to render it
+//to the index handlebars to dynamically add the api data as html
 router.get("/", function(req, res) {
   Summoner.find({}, function(err,data){
     if(err){
@@ -22,6 +23,7 @@ router.get("/", function(req, res) {
   });
   router.post("/search/:name", function(req, res){
     //need to use an ajax call on the submit button and send the data to this route
+    //this is the code I tried using to render the search information
     var newSummoner = req.params.name;
     console.log(newSummoner);
     
