@@ -1,11 +1,29 @@
-    <h1>hello</h1>
+<div class="jumbotron text-center" id="jumbo_div">
+  <h1 class="display-3">Jungle Corner</h1>
+  {{!-- <hr class="my-4"> --}}
+  <p class="lead">Learn their weaknesses</p>
+</div>
+<div class="container" id="search-box">
+    <input type="text" id="input-field"></input>
+    <button  class="btn btn-dark btn-lg" id="search-button">Search</button>
+</div>
+
+{{!-- <form class="container" id="search-box" action="/search/:name" method="GET">
+    <input type="text" id="input-field"></input>
+    <button  class="btn btn-dark btn-lg" id="search-button" type="submit">Search</button>
+</form> --}}
+
+<div id="summoner-container">
     {{#each summoners}}
-    {{!-- decide later whether or not to use forms to delete or ajax --}}
-      {{!-- <form action="/api/articles/delete/{{_id}}" method="POST"> --}}
-        <div class="container" id ="titleDiv">
+        <div class="container" id ="summoner_div">
+          <div id="img"><img src={{img}}></div>
           <div>{{name}}</div>
+          <div>{{rank}}</div>
+          <div>{{wins}}W/{{losses}}L</div>
+          <div>Commonly wards:   {{wardSpot}}  |     Deaths from ganks:   {{gankDeathsPerGame}} per game    |    Winrate if camped:    {{winrateIfCamped}}%</div>
+
         </div>
-      {{!-- </form> --}}
-          {{!-- <div class=text-right><button class="btn btn-dark " data-id={{_id}} data-savevalue = "true"id="save">save</button></div> --}}
     {{/each}}
+</div>
+
     

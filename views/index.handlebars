@@ -3,10 +3,16 @@
   {{!-- <hr class="my-4"> --}}
   <p class="lead">Learn their weaknesses</p>
 </div>
-<div class="container" id="search-box">
+{{!-- <div class="container" id="search-box">
     <input type="text" id="input-field"></input>
     <button  class="btn btn-dark btn-lg" id="search-button">Search</button>
-</div>
+</div> --}}
+
+<form class="container" id="search-box" action="/search/:name" method="GET">
+    <input type="text" id="input-field"></input>
+    <button  class="btn btn-dark btn-lg" id="search-button" type="submit">Search</button>
+</form>
+
 <div id="summoner-container">
     {{#each summoners}}
         <div class="container" id ="summoner_div">

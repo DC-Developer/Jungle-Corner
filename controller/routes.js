@@ -4,24 +4,26 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 
 var Summoner = require("../models/Summoner.js");
+var globalArray =[];
 //was not able to get the search button to load the api info and to render it
 //to the index handlebars to dynamically add the api data as html
 router.get("/", function(req, res) {
-  Summoner.find({}, function(err,data){
-    if(err){
-      console.log(err);
-    }else{
-      console.log("db working");
-      console.log(data);
-       hbsObject = {
-        summoners: data
-      }
-      console.log("hbs: ",hbsObject);
-      res.render("index", hbsObject);
-    }
-  })
+  // Summoner.find({}, function(err,data){
+  //   if(err){
+  //     console.log(err);
+  //   }else{
+  //     console.log("db working");
+  //     console.log(data);
+  //      hbsObject = {
+  //       summoners: data
+  //     }
+  //     console.log("hbs: ",hbsObject);
+  //     res.render("index", hbsObject);
+  //   }
+  // })
+  res.render("index");
   });
-  router.post("/search/:name", function(req, res){
+  router.get("/search/:name", function(req, res){
     //need to use an ajax call on the submit button and send the data to this route
     //this is the code I tried using to render the search information
     var newSummoner = req.params.name;
@@ -39,7 +41,7 @@ router.get("/", function(req, res) {
           summoners: data
         }
         console.log("hbs: ",hbsObject);
-        res.render("index", hbsObject);
+        res.render("summoners", hbsObject);
       }
     })
   });

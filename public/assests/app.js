@@ -5,10 +5,11 @@ $(document).on("click", "#search-button", function(e){
 
   $.ajax({
     url: "/search/" +name,
-    method: "POST"
-  }).done(function(data){
+    method: "GET"
+  })
+  .done(function(data){
     // location.reload();
-    console.log(data);  
+    window.location.href = "/search/"+name;  
   })
 })
 

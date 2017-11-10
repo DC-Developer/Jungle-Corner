@@ -33,12 +33,24 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //create db connection, then add code to seed database
-mongoose.connect(MONGOLAB_URI).then(() => {
-  MongooseSeed.loadModels(__dirname + '/models');
-  MongooseSeed.clearAll().then(() => {
-      MongooseSeed.populate(__dirname + '/data')
+// mongoose.connect(MONGOLAB_URI).then(() => {
+//   MongooseSeed.loadModels(__dirname + '/models');
+//   MongooseSeed.clearAll().then(() => {
+//       MongooseSeed.populate(__dirname + '/data')
+//   });
+// });
+"mongodb://localhost/Summoner"
+if (process.env.MONGODB_URI){
+  mongoose.connect(process.env.MONGODB_URI)
+}else{
+  mongoose.connect("mongodb://localhost/Summoner").then(() => {
+    MongooseSeed.loadModels(__dirname + '/models');
+    MongooseSeed.clearAll().then(() => {
+        MongooseSeed.populate(__dirname + '/data')
+    });
   });
-});
+}
+
 var db = mongoose.connection;
 
 // Show any mongoose errors
