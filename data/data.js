@@ -11,7 +11,8 @@ module.exports = {
           wardSpot: 'Top river bush',
           gankDeathsPerGame: 1,
           winrateIfCamped: 51.5,
-          currentGameId: 1152
+          currentGameId: 1152,
+          img: "https://raw.githubusercontent.com/DC-Developer/Jungle-Corner/master/public/assests/images/GalioSquare.png"
         },
         { name: 'Malphite',
           rank: 'Challenger',
@@ -20,7 +21,8 @@ module.exports = {
           wardSpot: 'Red bush',
           gankDeathsPerGame: 0.5,
           winrateIfCamped: 54,
-          currentGameId: 1152
+          currentGameId: 1152,
+          img: "https://raw.githubusercontent.com/DC-Developer/Jungle-Corner/master/public/assests/images/MalphiteSquare.png"
         },
         { name: 'Yasuo',
           rank: 'Master',
@@ -29,7 +31,8 @@ module.exports = {
           wardSpot: 'Mid-right river bush',
           gankDeathsPerGame: 2.3,
           winrateIfCamped: 47,
-          currentGameId: 1152
+          currentGameId: 1152,
+          img: "https://raw.githubusercontent.com/DC-Developer/Jungle-Corner/master/public/assests/images/YasuoSquare.png"
         
         },
         { name: 'Lulu',
@@ -39,7 +42,8 @@ module.exports = {
           wardSpot: 'Bot tri-bush',
           gankDeathsPerGame: 2,
           winrateIfCamped: 51,
-          currentGameId: 1152
+          currentGameId: 1152,
+          img: "https://raw.githubusercontent.com/DC-Developer/Jungle-Corner/master/public/assests/images/LuluSquare.png"
         
         },
         { name: 'Draven',
@@ -49,7 +53,8 @@ module.exports = {
           wardSpot: 'Bot lane-bush',
           gankDeathsPerGame: 4,
           winrateIfCamped: 50,
-          currentGameId: 1152
+          currentGameId: 1152,
+          img: "https://raw.githubusercontent.com/DC-Developer/Jungle-Corner/master/public/assests/images/DravenSquare.png"
         },
 
     ]

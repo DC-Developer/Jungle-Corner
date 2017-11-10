@@ -69,7 +69,7 @@ router.get("/", function(req, res) {
   });
   
   router.post("/api/summoners/delete/:id", function(req, res) {
-    Article.remove({"_id":req.params.id}, function(err, deleted){
+    Summoner.remove({"_id":req.params.id}, function(err, deleted){
       if(err){
         throw err;
       }else{
