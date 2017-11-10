@@ -1,24 +1,23 @@
-<div class="jumbotron text-center" id="background">
+<div class="jumbotron text-center" id="jumbo_div">
   <h1 class="display-3">Jungle Corner</h1>
-  <p class="lead"></p>
   {{!-- <hr class="my-4"> --}}
-  <p>Learn their weaknesses</p>
+  <p class="lead">Learn their weaknesses</p>
 </div>
 <div class="container" id="search-box">
     <input type="text" id="input-field"></input>
     <button  class="btn btn-dark btn-lg" id="search-button">Search</button>
 </div>
-
+<div id="summoner-container">
     {{#each summoners}}
     {{!-- decide later whether or not to use forms to delete or ajax --}}
       {{!-- <form action="/api/articles/delete/{{_id}}" method="POST"> --}}
-        <div class="container" id ="titleDiv">
+        <div class="container" id ="summoner_div">
           <div>{{name}}</div>
         </div>
       {{!-- </form> --}}
           {{!-- <div class=text-right><button class="btn btn-dark " data-id={{_id}} data-savevalue = "true"id="save">save</button></div> --}}
     {{/each}}
-
+</div>
 
 
 

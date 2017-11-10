@@ -3,15 +3,7 @@
     box-sizing: border-box;
 
 }
-#titleDiv{
-    background-color: rgb(42, 139, 123);
-    padding: 5px 5px;
-    margin-bottom: 15px;
-}
-#titleDiv a{
-    font-size: 20px;
-    color: white;
-}
+
 h1{
     text-align: center;
 }
@@ -34,6 +26,7 @@ textarea, input {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 75px;
 }
 #input-field{
     height: 45px;
@@ -42,3 +35,31 @@ textarea, input {
 #search-button{
     height: 90%
 }
+#jumbo_div{
+    background: url("https://raw.githubusercontent.com/DC-Developer/Jungle-Corner/master/public/assests/images/source.gif")center center no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    height: 700px;
+    color: rgba(255, 255, 255, 0.986);
+    font-size: 30px;
+}
+.display-3{
+    padding: 100px;
+    text-shadow: 0px 5px 7px rgba(255, 10, 10, 0.788);
+    font-size: 3em;
+    font-weight: bold;
+}
+.lead{
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 0px 5px 7px rgba(255, 10, 10, 0.788);
+}
+#summoner_div{
+    background-color: rgba(255, 10, 10, 0.788);
+    padding: 5px 5px;
+    border-bottom: 1px solid black;
+}
+#summoner_container{
+    padding-bottom: 20px;
+}
+

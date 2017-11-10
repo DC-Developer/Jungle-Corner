@@ -6,14 +6,19 @@ var mongoose = require("mongoose");
 var Summoner = require("../models/Summoner.js");
 
 router.get("/", function(req, res) {
-    // Article.find({}, function(req, data){
-    //   var hbsObject = {
-    //           articles: data
-    //   }
-    //   console.log("I am working");
-    //   res.render("index", hbsObject);
-    // })
-    res.render("index");
+  Summoner.find({}, function(err,data){
+    if(err){
+      console.log(err);
+    }else{
+      console.log("db working");
+      console.log(data);
+       hbsObject = {
+        summoners: data
+      }
+      console.log("hbs: ",hbsObject);
+      res.render("index", hbsObject);
+    }
+  })
   });
   router.post("/search/:name", function(req, res){
     //need to use an ajax call on the submit button and send the data to this route
@@ -32,7 +37,7 @@ router.get("/", function(req, res) {
           summoners: data
         }
         console.log("hbs: ",hbsObject);
-        res.render("summoners", hbsObject);
+        res.render("index", hbsObject);
       }
     })
   });
