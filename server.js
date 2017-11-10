@@ -40,8 +40,8 @@ app.set("view engine", "handlebars");
 //   });
 // });
 "mongodb://localhost/Summoner"
-if (process.env.MONGODB_URI){
-  mongoose.connect(MONGODB_URI).then(() => {
+if (process.env.MONGOLAB_URI){
+  mongoose.connect(MONGOLAB_URI).then(() => {
     MongooseSeed.loadModels(__dirname + '/models');
     MongooseSeed.clearAll().then(() => {
         MongooseSeed.populate(__dirname + '/data')
