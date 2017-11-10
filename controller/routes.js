@@ -31,7 +31,7 @@ router.get("/", function(req, res) {
     
     var hbsObject = {};
 
-    Summoner.find({name: newSummoner}, function(err,data){
+    Summoner.find({currentGameId: 1152}, function(err,data){
       if(err){
         console.log(err);
       }else{
